@@ -1,2 +1,2 @@
 #!/bin/bash
-chown vincent staff files
+chown vincent:staff *

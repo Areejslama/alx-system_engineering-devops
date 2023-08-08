@@ -1,0 +1,2 @@
+#!/bin/bash
+uniq [ One line, one word [One line, one word]]

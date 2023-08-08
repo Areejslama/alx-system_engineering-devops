@@ -1,2 +1,2 @@
 #!/bin/bash
-echo"z,e" | tr A,c
+tr Ac ze

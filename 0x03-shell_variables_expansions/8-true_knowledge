@@ -1,2 +1,2 @@
 #!/bin/bash
-env TRUEKNOWLEDGE="1337"
+echo $((128+(($TRUEKNOWLEDGE))

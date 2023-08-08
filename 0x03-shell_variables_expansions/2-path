@@ -1,2 +1,2 @@
 #!/bin/bash
-echo /action $path*
+echo /action $path usr ~/.bashrc

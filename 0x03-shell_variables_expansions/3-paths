@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $path |tr ":" "\n" | wc -l
+tree $path -d | wc -l

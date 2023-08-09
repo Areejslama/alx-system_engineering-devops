@@ -1,2 +1,2 @@
 #!/bin/bash
-find /  f d -empty |tr '\n' ' '
+find . -type -empty f ".*" d |tr '\n' ' '

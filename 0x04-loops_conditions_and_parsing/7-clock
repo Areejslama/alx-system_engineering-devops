@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# this script display clock
+i=0
+while [ $i -le 59 ]
+do
+echo "$i"
+i=$((i+1))
+done
+i=1
+while [ $i -le 12 ]
+do
+echo "$i"
+i=$((i+1))
+done

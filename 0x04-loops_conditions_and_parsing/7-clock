@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # this script display clock
-i=0
-while [ $i -le 59 ]
+Hour=0
+while [ $Hour -le 12 ]
 do
-echo "$i"
-i=$((i+1))
+	echo "Hour: $Hour"
+	Hour=$((Hour+1))
+minutes=1	
+while [ $minutes -le 59 ]
+do
+echo "$minutes"
+minutes=$((minutes+1))
 done
-i=1
-while [ $i -le 12 ]
-do
-echo "$i"
-i=$((i+1))
 done

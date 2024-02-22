@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #this script display Best School string 10 times
-for i in {1..10}
+for ((i = 1; i < 11; i++))
 do
 echo "Best School"
 done

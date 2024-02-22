@@ -2,7 +2,7 @@
 # this script display files of the current directory
 for file in *; 
 do
-    if [[ $file == *-* ]]; 
+    if [[ $file != .* && $file == *-* ]]; 
 then
         name="${file#*-}"
         echo "$name"

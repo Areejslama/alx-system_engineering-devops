@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# this script display pid without ps
+top -n 1 -b | grep bash 

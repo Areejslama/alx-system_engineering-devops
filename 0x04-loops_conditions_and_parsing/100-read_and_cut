@@ -4,7 +4,7 @@ while true
 do
 if [ -f /etc/passwd ]
 then
-cat  /etc/passwd | cut -d: -f1,3,6
+cmd < /etc/passwd | cut -d: -f1,3,6
 else 
 echo "file not found"
 fi

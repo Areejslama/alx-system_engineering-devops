@@ -1,5 +1,6 @@
 # this script create a manifest that kills
-exec { ' kill_killmenow_process':
-command => 'pkill killmenow',
-path    => '/bin:/usr/bin', 
+exec { 'kill_killmenow_process':
+  command => 'pkill killmenow',
+  path    => '/bin:/usr/bin',
+  returns => [0, 1],
 }

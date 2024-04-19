@@ -1,5 +1,5 @@
 # this  script to install a package
 package {'flask':
- ensure => 'installed',
- source => 'pip3',
+  ensure => 'installed',
+provider => 'pip3',
 }

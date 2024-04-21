@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# this script connect to file
+Host 500025-web-01
+    HostName 52.91.35.130
+    User  ubuntu
+    IdentityFile ./school
+     PasswordAuthentication no

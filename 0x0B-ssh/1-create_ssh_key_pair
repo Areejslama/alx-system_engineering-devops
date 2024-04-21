@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# this script generet rsa key pair
+ssh-keygen

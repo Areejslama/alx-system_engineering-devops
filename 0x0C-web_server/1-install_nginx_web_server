@@ -2,7 +2,7 @@
 # this script to install nginx
 sudo apt-get update -y
 sudo apt-get -y install nginx
-sudo echo "Hello World!" > /var/www/html/index.html
+sudo echo "Hello World!" > /var/www/html/index.nginx-debian.html
 sudo chown -R "$USER":"$USER" /var/www/html
 sudo chmod -R 755 /var/www
 sudo sed -i "s/listen 80;/listen 80;/" /etc/nginx/sites-available/default

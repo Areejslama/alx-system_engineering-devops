@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # this script to fix bug
-sudo service Apache start
+echo "ServerName localhost" >> /etc/apache2.conf
+service Apache start

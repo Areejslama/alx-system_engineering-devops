@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# this script to solve nginx debug
+ln -sf \etc\nginx\sites-available\default \etc\nginx\sites-enabled\default
+service nginx start

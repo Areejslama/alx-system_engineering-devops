@@ -8,20 +8,18 @@ package { 'nginx':
   ensure  => 'installed',
   require => Exec['update system']
 }
-file { '/var/www/index/index.html':
+file { '/var/www/html/index.html':
   content  => 'Hello world'
 }
 exec { 'redirect_me':
-  command  => 'sed -i "241s/.*/rewrite ^\/redirect_me https:\/\/github.com\/areejslama permanent;/" /etc/nginx/sites-enabled/default',
-  path     => '/bin:/usr/bin',
-  require  => Package['nginx']
+  command  => 'sed -i "24i\    rewrite ^\/redirect_me https:\/\/github.com\/areejslama permanent;/" /etc/nginx/sites-enabled/default',
+  provider => 'shell'
 }
 exec { 'HTTP header':
-  command  => 'sed -i "251s/.*/add_header X-Served-By $HOSTNAME;/" /etc/nginx/sites-enabled/default',
-   path     => '/bin:/usr/bin',
-  require  => Package['nginx']
+  command  => 'sed -i "25i\    add_header X-Served-By $HOSTNAME;/" /etc/nginx/sites-enabled/default',
+  provider => 'shell'
 }
 service { 'nginx':
-  ensure  => 'running',
+  ensure  => running,
   require => Package['nginx']
 }

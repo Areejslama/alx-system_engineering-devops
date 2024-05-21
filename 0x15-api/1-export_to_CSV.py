@@ -11,8 +11,9 @@ if __name__ == "__main__":
     employee = requests.get(url + "users/{}".format(employee_id)).json()
     todos = requests.get(url + "todos", params={"userId": employee_id}).json()
     complete = [t.get("title") for t in todos if t.get("completed") is True]
-    with open ("{}.csv".format(employee_id), "w")as f:
+    with open("{}.csv".format(employee_id), "w")as f:
         write = csv.writer(f,  quoting=csv.QUOTE_ALL)
-        for t in todos:
-            write.writerow([employee_id, employee.get("username"),
-                t.get("completed"), t.get("title")])
+    for t in todos:
+        write.writerow(
+                [employee_id, employee.get("username"),
+                    t.get("completed"), t.get("title")])

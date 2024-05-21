@@ -14,7 +14,7 @@ if __name__ == "__main__":
     complete = [t.get("title") for t in todos if t.get("completed") is True]
     with open("{}.json".format(employee_id), "w") as f:
         json.dump({
-            "employee_id": [{
+            employee_id: [{
                 "task": t.get("title"),
                 "completed": t.get("completed"),
                 "username": employee.get("username")

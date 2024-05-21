@@ -13,7 +13,7 @@ if __name__ == "__main__":
     complete = [t.get("title") for t in todos if t.get("completed") is True]
     with open("{}.csv".format(employee_id), "w")as f:
         write = csv.writer(f,  quoting=csv.QUOTE_ALL)
-    for t in todos:
-        write.writerow(
+        for t in todos:
+            [write.writerow(
                 [employee_id, employee.get("username"),
-                    t.get("completed"), t.get("title")])
+                    t.get("completed"), t.get("title")])]

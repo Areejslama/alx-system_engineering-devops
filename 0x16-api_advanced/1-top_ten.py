@@ -9,16 +9,11 @@ def top_ten(subreddit):
 
     if subreddit is None:
         return None
-    
     url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
-    
     res = requests.get(url, headers=headers, allow_redirects=False)
-    
     if res.status_code != 200:
         return None
-    
     data = res.json().get('data', {})
     children = data.get('children', [])
-    
     for post in children[:10]:
         print(post['data']['title'])

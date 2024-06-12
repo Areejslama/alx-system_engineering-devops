@@ -24,7 +24,7 @@ location / {
  location /airbnb-onepage {
         proxy_pass http://0.0.0.0:5000/airbnb-onepage;
 }
- location ~ ^/airbnb-dynamic/number_odd_or_even/<int:n> {
+ location ~ ^/airbnb-dynamic/number_odd_or_even/(\d+)$ {
         proxy_pass http://0.0.0.0:5001/number_odd_or_even/\$1;
 }
  location /api/ {

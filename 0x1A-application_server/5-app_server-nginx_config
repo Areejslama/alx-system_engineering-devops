@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 # this script to config nginx
 server {
         listen 80 default_server;

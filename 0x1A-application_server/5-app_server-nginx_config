@@ -2,13 +2,15 @@ server {
     listen 80 default_server;
     listen [::]:80 default_server;
 
-    root /var/www/html;
-    index index.html index.htm index.nginx-debian.html;
+    root /var/www/html;  # This should point to your web root directory
+    index index.html index.htm;
 
-    server_name _;
+    server_name _;  # Wildcard for all server names
 
+    # Custom Header
     add_header X-Served-By 500025-web-01;
 
+    # Serve static files for /hbnb_static
     location /hbnb_static {
         alias /data/web_static/current/;
     }
@@ -21,6 +23,8 @@ server {
     location / {
         proxy_pass http://0.0.0.0:5003;
     }
+
+    # Custom 404 page
     error_page 404 /error_404.html;
     location = /error_404.html {
         internal;

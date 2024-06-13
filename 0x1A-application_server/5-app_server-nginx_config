@@ -14,6 +14,6 @@ server {
         alias /home/ubuntu/AirBnB_clone_v4/web_dynamic/static/;
                 try_files $uri $uri/ =404;
 }
- location / {
-        proxy_pass http://0.0.0.0:5003;
-}
+  location / {
+        include proxy_params;
+	proxy_pass http://localhost:5003/2-hbnb;

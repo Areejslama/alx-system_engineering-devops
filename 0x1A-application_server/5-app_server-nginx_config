@@ -15,7 +15,7 @@ server {
               proxy_pass http://0.0.0.0:5003;
 }
   location / {
-	proxy_pass http://0.0.0.0:5003/2-hbnb;
+	proxy_pass http://0.0.0.0:5003;
 }
   error_page 404 /error_404.html;
     location = /error_404.html {
